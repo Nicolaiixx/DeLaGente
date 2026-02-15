@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nicole Portfolio</title>
+  <title>Nicole De La Gente - Web Designer Portfolio</title>
+  <meta name="description" content="Nicole De La Gente - Web Designer specializing in clean, user-friendly websites through thoughtful layouts and visual design.">
+  <meta name="keywords" content="web designer, portfolio, frontend developer, UI/UX">
   <link rel="icon" type="image/png" href="./N-Logo.png" />
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -80,7 +82,53 @@
       transform: scaleX(1);
     }
 
+    .skill-bar {
+      height: 8px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .skill-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #22d3ee, #a855f7);
+      border-radius: 10px;
+      transition: width 1.5s ease-out;
+      width: 0;
+    }
+
     html { scroll-behavior: smooth; }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: rgba(34,211,238,0.2);
+      border: 1px solid rgba(34,211,238,0.4);
+      backdrop-filter: blur(10px);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    .back-to-top.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .back-to-top:hover {
+      background: rgba(34,211,238,0.4);
+      transform: translateY(-3px);
+    }
   </style>
 </head>
 
@@ -164,7 +212,7 @@
 
           <div class="flex w-full flex-col gap-10 md:flex-row md:items-center">
 
-            <!-- Image Section - Fixed width and centered -->
+            <!-- Image Section -->
             <div class="w-full md:w-5/12 flex items-center justify-center shrink-0">
               <div class="group relative w-full max-w-xs rounded-2xl bg-white/5 p-4 ring-1 ring-white/10
                           transition duration-300 hover:ring-cyan-300/25">
@@ -173,14 +221,14 @@
                      style="background: radial-gradient(circle at 30% 30%, rgba(34,211,238,.35), transparent 55%);">
                 </div>
 
-                <img src="hero.png" alt="Hero design"
+                <img src="hero.png" alt="Nicole De La Gente"
                      class="relative w-full drop-shadow-[0_10px_25px_rgba(0,0,0,0.45)]
                             transition duration-300 group-hover:scale-[1.02]"
                      style="animation: glowPulse 4.5s ease-in-out infinite;">
               </div>
             </div>
 
-            <!-- Text Section - Improved spacing and alignment -->
+            <!-- Text Section -->
             <div class="w-full md:w-7/12 flex flex-col justify-center">
               <h2 class="text-xl sm:text-2xl font-semibold">Hi, I'm Nicole.</h2>
 
@@ -247,11 +295,40 @@
             I create responsive web layouts and style pages with a clean, modern look.
           </p>
 
+          <div class="mt-5 space-y-3">
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-xs text-cyan-200">HTML & CSS</span>
+                <span class="text-xs text-white/50">Advanced</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" data-width="90%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-xs text-cyan-200">Tailwind CSS</span>
+                <span class="text-xs text-white/50">Intermediate</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" data-width="75%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-xs text-cyan-200">Responsive Design</span>
+                <span class="text-xs text-white/50">Advanced</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" data-width="85%"></div>
+              </div>
+            </div>
+          </div>
+
           <div class="mt-5 flex flex-wrap gap-2">
             <span class="rounded-full border border-cyan-300/25 bg-cyan-300/10 px-3 py-1 text-xs text-cyan-200">HTML</span>
             <span class="rounded-full border border-cyan-300/25 bg-cyan-300/10 px-3 py-1 text-xs text-cyan-200">CSS</span>
             <span class="rounded-full border border-violet-400/25 bg-violet-400/10 px-3 py-1 text-xs text-violet-200">Tailwind</span>
-            <span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70">Responsive Design</span>
           </div>
         </div>
 
@@ -271,6 +348,36 @@
           <p class="mt-3 text-white/70 leading-relaxed">
             I build basic applications and practice logic, OOP concepts, and problem-solving through coding activities.
           </p>
+
+          <div class="mt-5 space-y-3">
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-xs text-violet-200">Java</span>
+                <span class="text-xs text-white/50">Intermediate</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" data-width="70%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-xs text-violet-200">Python</span>
+                <span class="text-xs text-white/50">Intermediate</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" data-width="65%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-xs text-violet-200">C#</span>
+                <span class="text-xs text-white/50">Advanced</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" data-width="80%"></div>
+              </div>
+            </div>
+          </div>
 
           <div class="mt-5 flex flex-wrap gap-2">
             <span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/80">Java</span>
@@ -296,6 +403,27 @@
             I work with databases for storing and managing information using basic queries and CRUD operations.
           </p>
 
+          <div class="mt-5 space-y-3">
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-xs text-pink-200">SQL & MySQL</span>
+                <span class="text-xs text-white/50">Intermediate</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" data-width="70%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-xs text-pink-200">MongoDB</span>
+                <span class="text-xs text-white/50">Beginner</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" data-width="55%"></div>
+              </div>
+            </div>
+          </div>
+
           <div class="mt-5 flex flex-wrap gap-2">
             <span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/80">SQL</span>
             <span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/80">MySQL</span>
@@ -319,6 +447,27 @@
           <p class="mt-3 text-white/70 leading-relaxed">
             I use tools for development, UI layout, and creative editing for visuals and videos.
           </p>
+
+          <div class="mt-5 space-y-3">
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-xs text-cyan-200">Figma</span>
+                <span class="text-xs text-white/50">Intermediate</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" data-width="75%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-xs text-cyan-200">Adobe Suite</span>
+                <span class="text-xs text-white/50">Intermediate</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" data-width="70%"></div>
+              </div>
+            </div>
+          </div>
 
           <div class="mt-5 flex flex-wrap gap-2">
             <span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/80">VS Code</span>
@@ -344,13 +493,17 @@
       </div>
 
       <div class="grid gap-8 md:grid-cols-2">
-        <article class="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md overflow-hidden shadow-[0_0_0_1px_rgba(255,255,255,0.06)]">
+        <article class="group rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md overflow-hidden 
+                        shadow-[0_0_0_1px_rgba(255,255,255,0.06)]
+                        hover:border-cyan-300/30 hover:shadow-[0_0_35px_rgba(34,211,238,0.15)] transition-all duration-300">
           <div class="p-6">
-            <div class="rounded-2xl overflow-hidden border border-white/10 bg-black/20">
-              <img src="LBMS-Logo.png" alt="Library System Management" class="w-full h-[250px] object-cover" />
+            <div class="rounded-2xl overflow-hidden border border-white/10 bg-black/20 relative">
+              <img src="LBMS-Logo.png" alt="Library System Management" class="w-full h-[250px] object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
 
             <h3 class="mt-6 text-xl font-bold text-white">Library System Management</h3>
+            
             <p class="mt-3 text-sm leading-relaxed text-white/70">
               A desktop library dashboard that tracks users, books, loans, and fines in one view.
               Built to support fast monitoring, clearer reporting, and smoother admin workflow.
@@ -365,13 +518,17 @@
           </div>
         </article>
 
-        <article class="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md overflow-hidden shadow-[0_0_0_1px_rgba(255,255,255,0.06)]">
+        <article class="group rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md overflow-hidden 
+                        shadow-[0_0_0_1px_rgba(255,255,255,0.06)]
+                        hover:border-violet-400/30 hover:shadow-[0_0_35px_rgba(168,85,247,0.15)] transition-all duration-300">
           <div class="p-6">
-            <div class="rounded-2xl overflow-hidden border border-white/10 bg-black/20">
-              <img src="RMS-Logo.png" alt="Resort Management System" class="w-full h-[250px] object-cover" />
+            <div class="rounded-2xl overflow-hidden border border-white/10 bg-black/20 relative">
+              <img src="RMS-Logo.png" alt="Resort Management System" class="w-full h-[250px] object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
 
             <h3 class="mt-6 text-xl font-bold text-white">Resort Management System</h3>
+            
             <p class="mt-3 text-sm leading-relaxed text-white/70">
               A resort operations dashboard focused on daily activity: arrivals, check-ins, check-outs,
               in-house guests, extensions, and cancellations—plus a quick occupancy view.
@@ -401,7 +558,7 @@
 
       <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 justify-items-center">
 
-        <a href="https://github.com/Nicolaiixx" target="_blank"
+        <a href="https://github.com/Nicolaiixx" target="_blank" rel="noopener noreferrer"
            class="group w-full max-w-[260px] rounded-2xl border border-white/10 bg-white/5 p-6 text-center
                   backdrop-blur-md transition hover:-translate-y-1
                   hover:border-cyan-300/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.25)]">
@@ -413,7 +570,7 @@
           <span class="text-xs text-white/50">Nicolaiixx</span>
         </a>
 
-        <a href="https://instagram.com/iamcoliey" target="_blank"
+        <a href="https://instagram.com/iamcoliey" target="_blank" rel="noopener noreferrer"
            class="group w-full max-w-[260px] rounded-2xl border border-white/10 bg-white/5 p-6 text-center
                   backdrop-blur-md transition hover:-translate-y-1
                   hover:border-pink-400/40 hover:shadow-[0_0_30px_rgba(236,72,153,0.25)]">
@@ -434,7 +591,7 @@
             <path d="M2 5.75A2.75 2.75 0 0 1 4.75 3h14.5A2.75 2.75 0 0 1 22 5.75v12.5A2.75 2.75 0 0 1 19.25 21H4.75A2.75 2.75 0 0 1 2 18.25V5.75Zm2.75-.25a1.25 1.25 0 0 0-1.25 1.25v.43l8.5 5.1 8.5-5.1v-.43a1.25 1.25 0 0 0-1.25-1.25H4.75Zm16 3.32-7.96 4.78a1.5 1.5 0 0 1-1.58 0L3.25 8.82v9.43c0 .69.56 1.25 1.25 1.25h14.5c.69 0 1.25-.56 1.25-1.25V8.82Z"/>
           </svg>
           <p class="font-semibold">Email</p>
-          <span class="text-xs text-white/50">nicoledelagente@gmail.com</span>
+          <span class="text-xs text-white/50 break-all px-2">nicoledelagente@gmail.com</span>
         </a>
 
         <div class="group w-full max-w-[260px] rounded-2xl border border-white/10 bg-white/5 p-6 text-center
@@ -489,7 +646,7 @@
 
             <div id="form-message"
                  class="mt-5 rounded-xl border border-cyan-300/20 bg-cyan-300/10 px-4 py-3 text-center text-sm text-cyan-200 opacity-0 transition">
-              Submission saved successfully!
+              Message sent successfully!
             </div>
           </form>
 
@@ -498,6 +655,13 @@
     </section>
 
   </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg class="h-5 w-5 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+    </svg>
+  </button>
 
   <script>
     const splash = document.getElementById("splash");
@@ -513,6 +677,7 @@
         document.body.classList.remove("overflow-hidden");
         app.classList.remove("app-hidden");
         app.classList.add("app-show");
+        initSkillBars();
       }, 450);
     }
 
@@ -522,6 +687,7 @@
 
     splash.addEventListener("click", hideSplash);
 
+    // Navigation
     const links = document.querySelectorAll(".navlink");
     const sections = ["home", "skills", "projects", "contact"]
       .map(id => document.getElementById(id))
@@ -553,6 +719,7 @@
       setActive(current);
     });
 
+    // Hero Card Tilt
     const card = document.getElementById("heroCard");
     if (card) {
       function resetTilt() {
@@ -576,9 +743,25 @@
       card.addEventListener("mouseleave", resetTilt);
       resetTilt();
     }
-  </script>
 
-  <script>
+    // Skill Bars Animation
+    function initSkillBars() {
+      const skillBars = document.querySelectorAll('.skill-bar-fill');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const width = entry.target.getAttribute('data-width');
+            entry.target.style.width = width;
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      skillBars.forEach(bar => observer.observe(bar));
+    }
+
+    // Contact Form
     const STORAGE_KEY = "contact_submissions";
 
     const form = document.getElementById("contact-form");
@@ -587,7 +770,7 @@
     function showToast() {
       if (!formMessage) return;
       formMessage.classList.add("opacity-100");
-      setTimeout(() => formMessage.classList.remove("opacity-100"), 2200);
+      setTimeout(() => formMessage.classList.remove("opacity-100"), 3000);
     }
 
     function saveSubmission(entry) {
@@ -614,15 +797,33 @@
         showToast();
       });
     }
+
+    // Back to Top Button
+    const backToTop = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTop.classList.add('show');
+      } else {
+        backToTop.classList.remove('show');
+      }
+    });
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
   </script>
 
   <!-- Footer -->
   <footer class="mt-20 border-t border-white/10">
     <div class="mx-auto max-w-6xl px-6 py-10">
-      <div class="flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-10">
+      <div class="flex flex-col items-center gap-6">
         <div class="flex items-center gap-3 text-white/70">
           <span class="inline-flex h-7 w-7 items-center justify-center rounded-full border border-cyan-400/25 bg-cyan-500/10 text-sm font-bold text-cyan-200">
-            C
+            N
           </span>
           <p class="text-sm">
             <span id="yr"></span>
@@ -631,8 +832,29 @@
           </p>
         </div>
 
+        <div class="flex gap-6">
+          <a href="https://github.com/Nicolaiixx" target="_blank" rel="noopener noreferrer" 
+             class="text-white/50 hover:text-cyan-300 transition">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 .5C5.73.5.5 5.74.5 12.03c0 5.11 3.29 9.44 7.86 10.97.58.1.79-.25.79-.56v-2.17c-3.2.7-3.87-1.55-3.87-1.55-.53-1.36-1.3-1.72-1.3-1.72-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.74 1.27 3.41.97.1-.76.41-1.27.75-1.56-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.3 1.19-3.11-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.19.92-.26 1.9-.39 2.88-.39s1.96.13 2.88.39c2.21-1.5 3.18-1.19 3.18-1.19.63 1.59.23 2.77.11 3.06.74.81 1.19 1.85 1.19 3.11 0 4.42-2.69 5.39-5.25 5.67.42.36.8 1.08.8 2.18v3.23c0 .31.21.66.8.55 4.56-1.53 7.85-5.86 7.85-10.97C23.5 5.74 18.27.5 12 .5z"/>
+            </svg>
+          </a>
+          <a href="https://instagram.com/iamcoliey" target="_blank" rel="noopener noreferrer"
+             class="text-white/50 hover:text-pink-400 transition">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm5.75-.88a.88.88 0 1 1 0 1.76.88.88 0 0 1 0-1.76Z"/>
+            </svg>
+          </a>
+          <a href="mailto:nicoledelagente@gmail.com"
+             class="text-white/50 hover:text-red-400 transition">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M2 5.75A2.75 2.75 0 0 1 4.75 3h14.5A2.75 2.75 0 0 1 22 5.75v12.5A2.75 2.75 0 0 1 19.25 21H4.75A2.75 2.75 0 0 1 2 18.25V5.75Zm2.75-.25a1.25 1.25 0 0 0-1.25 1.25v.43l8.5 5.1 8.5-5.1v-.43a1.25 1.25 0 0 0-1.25-1.25H4.75Zm16 3.32-7.96 4.78a1.5 1.5 0 0 1-1.58 0L3.25 8.82v9.43c0 .69.56 1.25 1.25 1.25h14.5c.69 0 1.25-.56 1.25-1.25V8.82Z"/>
+            </svg>
+          </a>
+        </div>
+
         <p class="text-xs text-white/45">
-          Built with HTML + Tailwind
+          Built with HTML + Tailwind • Made with 💖
         </p>
       </div>
     </div>
