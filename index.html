@@ -97,24 +97,33 @@
       </div>
     </div>
 
-    <header class="mx-auto max-w-6xl px-6 py-5 in-up relative">
-      <div class="absolute left-6 top-1/2 -translate-y-1/2 group flex items-center gap-2">
-        <span class="text-lg font-semibold tracking-wide">Nicole</span>
-        <span class="h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_18px_rgba(34,211,238,0.9)]
-                    transition-transform duration-300 group-hover:scale-125"></span>
-      </div>
+    <header class="sticky top-0 z-50 border-b border-white/5 bg-[#0b0f1a]/70 backdrop-blur-md">
+  <div class="mx-auto max-w-6xl px-6 py-4 grid grid-cols-3 items-center">
+    
+    <!-- LEFT: logo/name -->
+    <a href="#home" class="group flex items-center gap-2 justify-self-start">
+      <span class="text-lg font-semibold tracking-wide">Nicole</span>
+      <span class="h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_18px_rgba(34,211,238,0.9)]
+                   transition-transform duration-300 group-hover:scale-125"></span>
+    </a>
 
-      <nav class="mx-auto w-fit flex items-center gap-6 text-sm font-medium">
-        <a href="#home" class="navlink relative text-white/90 hover:text-white transition">
-          Home
-          <span class="absolute -bottom-2 left-0 h-[2px] w-full bg-cyan-300
-                      shadow-[0_0_18px_rgba(34,211,238,0.9)]"></span>
-        </a>
-        <a href="#skills" class="navlink text-white/70 hover:text-white transition">Skills</a>
-        <a href="#projects" class="navlink text-white/70 hover:text-white transition">Projects</a>
-        <a href="#contact" class="navlink text-white/70 hover:text-white transition">Contact</a>
-      </nav>
-    </header>
+    <!-- CENTER: nav -->
+    <nav class="justify-self-center flex items-center gap-6 text-sm font-medium">
+      <a href="#home" class="navlink relative text-white/90 hover:text-white transition">
+        Home
+        <span class="absolute -bottom-2 left-0 h-[2px] w-full bg-cyan-300
+                     shadow-[0_0_18px_rgba(34,211,238,0.9)]"></span>
+      </a>
+      <a href="#skills" class="navlink text-white/70 hover:text-white transition">Skills</a>
+      <a href="#projects" class="navlink text-white/70 hover:text-white transition">Projects</a>
+      <a href="#contact" class="navlink text-white/70 hover:text-white transition">Contact</a>
+    </nav>
+
+    <!-- RIGHT: spacer (keeps center true center) -->
+    <div class="justify-self-end"></div>
+  </div>
+</header>
+
 
     <!-- ✅ HOME (FIXED CENTER) -->
     <section id="home" class="min-h-[calc(100vh-88px)] py-10 flex flex-col justify-center">
