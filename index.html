@@ -752,13 +752,22 @@
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const width = entry.target.getAttribute('data-width');
-            entry.target.style.width = width;
+            setTimeout(() => {
+              entry.target.style.width = width;
+            }, 100);
             observer.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.5 });
+      }, { threshold: 0.3 });
 
       skillBars.forEach(bar => observer.observe(bar));
+    }
+
+    // Initialize skill bars on load (backup in case splash doesn't trigger)
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initSkillBars);
+    } else {
+      initSkillBars();
     }
 
     // Contact Form
