@@ -97,23 +97,28 @@
       </div>
     </div>
 
-    <header class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 in-up">
-      <div class="group flex items-center gap-2">
-        <span class="text-lg font-semibold tracking-wide">Nicole</span>
-        <span class="h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_18px_rgba(34,211,238,0.9)]
-                     transition-transform duration-300 group-hover:scale-125"></span>
-      </div>
+    <!-- ✅ CENTERED NAVBAR -->
+    <header class="mx-auto max-w-6xl px-6 py-5 in-up">
+      <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-10">
 
-      <nav class="flex items-center gap-6 text-sm font-medium">
-        <a href="#home" class="navlink relative text-white/90 hover:text-white transition">
-          Home
-          <span class="absolute -bottom-2 left-0 h-[2px] w-full bg-cyan-300
-                       shadow-[0_0_18px_rgba(34,211,238,0.9)]"></span>
-        </a>
-        <a href="#skills" class="navlink text-white/70 hover:text-white transition">Skills</a>
-        <a href="#projects" class="navlink text-white/70 hover:text-white transition">Projects</a>
-        <a href="#contact" class="navlink text-white/70 hover:text-white transition">Contact</a>
-      </nav>
+        <div class="group flex items-center gap-2">
+          <span class="text-lg font-semibold tracking-wide">Nicole</span>
+          <span class="h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_18px_rgba(34,211,238,0.9)]
+                       transition-transform duration-300 group-hover:scale-125"></span>
+        </div>
+
+        <nav class="flex flex-wrap items-center justify-center gap-6 text-sm font-medium">
+          <a href="#home" class="navlink relative text-white/90 hover:text-white transition">
+            Home
+            <span class="absolute -bottom-2 left-0 h-[2px] w-full bg-cyan-300
+                         shadow-[0_0_18px_rgba(34,211,238,0.9)]"></span>
+          </a>
+          <a href="#skills" class="navlink text-white/70 hover:text-white transition">Skills</a>
+          <a href="#projects" class="navlink text-white/70 hover:text-white transition">Projects</a>
+          <a href="#contact" class="navlink text-white/70 hover:text-white transition">Contact</a>
+        </nav>
+
+      </div>
     </header>
 
     <section id="home" class="mx-auto max-w-6xl px-6 min-h-[calc(100vh-88px)] flex flex-col justify-center py-10">
@@ -128,8 +133,9 @@
         </p>
       </div>
 
+      <!-- ✅ HERO CARD CENTERED -->
       <div id="heroCard"
-           class="tilt mt-12 rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-8
+           class="tilt mt-12 mx-auto w-full max-w-5xl rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-8
                   shadow-[0_0_30px_rgba(34,211,238,0.10)] backdrop-blur-md
                   transition duration-300 hover:border-cyan-300/30 hover:bg-white/8 in-up delay-4">
 
@@ -195,8 +201,10 @@
         </p>
       </div>
 
-      <div class="grid gap-6 md:grid-cols-2">
-        <div class="neon-border rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-md
+      <!-- ✅ CENTER GRID + CENTER CARDS -->
+      <div class="grid gap-6 md:grid-cols-2 md:justify-items-center">
+
+        <div class="neon-border w-full max-w-[560px] rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-md
                     shadow-[0_0_30px_rgba(34,211,238,0.10)]
                     hover:border-cyan-300/30 hover:bg-white/10 transition in-up delay-2">
           <div class="flex items-center gap-3">
@@ -221,7 +229,7 @@
           </div>
         </div>
 
-        <div class="neon-border rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-md
+        <div class="neon-border w-full max-w-[560px] rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-md
                     shadow-[0_0_30px_rgba(34,211,238,0.10)]
                     hover:border-violet-400/30 hover:bg-white/10 transition in-up delay-3">
           <div class="flex items-center gap-3">
@@ -245,7 +253,7 @@
           </div>
         </div>
 
-        <div class="neon-border rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-md
+        <div class="neon-border w-full max-w-[560px] rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-md
                     shadow-[0_0_30px_rgba(34,211,238,0.10)]
                     hover:border-pink-400/30 hover:bg-white/10 transition in-up delay-2">
           <div class="flex items-center gap-3">
@@ -269,7 +277,7 @@
           </div>
         </div>
 
-        <div class="neon-border rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-md
+        <div class="neon-border w-full max-w-[560px] rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-md
                     shadow-[0_0_30px_rgba(34,211,238,0.10)]
                     hover:border-cyan-300/30 hover:bg-white/10 transition in-up delay-3">
           <div class="flex items-center gap-3">
@@ -321,10 +329,11 @@
         </p>
       </div>
 
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <!-- ✅ CENTER CONTACT CARDS -->
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 justify-items-center">
 
         <a href="https://github.com/Nicolaiixx" target="_blank"
-           class="group rounded-2xl border border-white/10 bg-white/5 p-6 text-center
+           class="group w-full max-w-[260px] rounded-2xl border border-white/10 bg-white/5 p-6 text-center
                   backdrop-blur-md transition hover:-translate-y-1
                   hover:border-cyan-300/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.25)]">
           <svg class="mx-auto mb-4 h-8 w-8 text-cyan-300 group-hover:scale-110 transition"
@@ -336,7 +345,7 @@
         </a>
 
         <a href="https://instagram.com/iamcoliey" target="_blank"
-           class="group rounded-2xl border border-white/10 bg-white/5 p-6 text-center
+           class="group w-full max-w-[260px] rounded-2xl border border-white/10 bg-white/5 p-6 text-center
                   backdrop-blur-md transition hover:-translate-y-1
                   hover:border-pink-400/40 hover:shadow-[0_0_30px_rgba(236,72,153,0.25)]">
           <svg class="mx-auto mb-4 h-8 w-8 text-pink-400 group-hover:scale-110 transition"
@@ -348,7 +357,7 @@
         </a>
 
         <a href="mailto:nicoledelagente@gmail.com"
-           class="group rounded-2xl border border-white/10 bg-white/5 p-6 text-center
+           class="group w-full max-w-[260px] rounded-2xl border border-white/10 bg-white/5 p-6 text-center
                   backdrop-blur-md transition hover:-translate-y-1
                   hover:border-red-400/40 hover:shadow-[0_0_30px_rgba(248,113,113,0.25)]">
           <svg class="mx-auto mb-4 h-8 w-8 text-red-400 group-hover:scale-110 transition"
@@ -359,10 +368,9 @@
           <span class="text-xs text-white/50">nicoledelagente@gmail.com</span>
         </a>
 
-        <div
-          class="group rounded-2xl border border-white/10 bg-white/5 p-6 text-center
-                 backdrop-blur-md transition hover:-translate-y-1
-                 hover:border-violet-400/40 hover:shadow-[0_0_30px_rgba(167,139,250,0.25)]">
+        <div class="group w-full max-w-[260px] rounded-2xl border border-white/10 bg-white/5 p-6 text-center
+                    backdrop-blur-md transition hover:-translate-y-1
+                    hover:border-violet-400/40 hover:shadow-[0_0_30px_rgba(167,139,250,0.25)]">
           <svg class="mx-auto mb-4 h-8 w-8 text-violet-400 group-hover:scale-110 transition"
                fill="currentColor" viewBox="0 0 24 24">
             <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.07 22 2 13.93 2 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2Z"/>
@@ -374,11 +382,11 @@
       </div>
 
       <div class="mt-10">
-        <div class="neon-border rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-8 backdrop-blur-md
+        <div class="neon-border mx-auto w-full max-w-5xl rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-8 backdrop-blur-md
                     shadow-[0_0_30px_rgba(34,211,238,0.10)]
                     hover:border-cyan-300/30 hover:bg-white/10 transition">
 
-          <div class="flex items-center justify-between gap-3">
+          <div class="flex items-center justify-center gap-3 lg:justify-between">
             <h3 class="text-3xl font-extrabold tracking-wide text-center lg:text-left
                        drop-shadow-[0_0_22px_rgba(34,211,238,0.25)]">
               Contact Me
