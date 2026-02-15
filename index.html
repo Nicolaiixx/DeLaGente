@@ -97,14 +97,16 @@
       </div>
     </div>
 
-    <header class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 in-up">
-  <div class="group flex items-center gap-2">
+    <header class="mx-auto max-w-6xl px-6 py-5 in-up relative">
+  <!-- LEFT: logo/name -->
+  <div class="absolute left-6 top-1/2 -translate-y-1/2 group flex items-center gap-2">
     <span class="text-lg font-semibold tracking-wide">Nicole</span>
     <span class="h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_18px_rgba(34,211,238,0.9)]
                  transition-transform duration-300 group-hover:scale-125"></span>
   </div>
 
-  <nav class="flex flex-wrap items-center justify-end gap-6 text-sm font-medium">
+  <!-- CENTER: nav (true center) -->
+  <nav class="mx-auto w-fit flex items-center gap-6 text-sm font-medium">
     <a href="#home" class="navlink relative text-white/90 hover:text-white transition">
       Home
       <span class="absolute -bottom-2 left-0 h-[2px] w-full bg-cyan-300
@@ -115,6 +117,7 @@
     <a href="#contact" class="navlink text-white/70 hover:text-white transition">Contact</a>
   </nav>
 </header>
+
 
 
     <section id="home"
