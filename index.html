@@ -365,16 +365,6 @@
           <span class="px-3 py-1 rounded-full text-xs bg-cyan-500/10 border border-cyan-400/20 text-cyan-200">Guna UI</span>
           <span class="px-3 py-1 rounded-full text-xs bg-cyan-500/10 border border-cyan-400/20 text-cyan-200">CRUD</span>
         </div>
-
-        <div class="mt-6 flex flex-wrap gap-3">
-          <button
-            type="button"
-            onclick="openProjectModal('library')"
-            class="px-5 py-2.5 rounded-xl bg-cyan-500/15 border border-cyan-400/25 text-cyan-100 hover:bg-cyan-500/25 transition"
-          >
-            View Screenshots
-          </button>
-        </div>
       </div>
     </article>
 
@@ -401,107 +391,11 @@
           <span class="px-3 py-1 rounded-full text-xs bg-cyan-500/10 border border-cyan-400/20 text-cyan-200">Guna UI</span>
           <span class="px-3 py-1 rounded-full text-xs bg-cyan-500/10 border border-cyan-400/20 text-cyan-200">Dashboard</span>
         </div>
-
-        <div class="mt-6 flex flex-wrap gap-3">
-          <button
-            type="button"
-            onclick="openProjectModal('resort')"
-            class="px-5 py-2.5 rounded-xl bg-cyan-500/15 border border-cyan-400/25 text-cyan-100 hover:bg-cyan-500/25 transition"
-          >
-            View Screenshots
-          </button>
-        </div>
       </div>
     </article>
   </div>
-
-  <!-- Modal (FIXED: centered + no jump) -->
-  <div id="projectModal" class="fixed inset-0 hidden z-50">
-    <div class="absolute inset-0 bg-black/70" onclick="closeProjectModal()"></div>
-
-    <div class="relative min-h-screen w-full p-4 flex items-center justify-center">
-      <div class="w-full max-w-4xl rounded-2xl border border-white/10 bg-slate-950/90 backdrop-blur-xl overflow-hidden shadow-2xl">
-        <div class="flex items-center justify-between px-6 py-4 border-b border-white/10">
-          <h4 id="projectModalTitle" class="text-white font-bold">Project Screenshots</h4>
-          <button
-            type="button"
-            onclick="closeProjectModal()"
-            class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-white/80 hover:bg-white/10 transition"
-          >
-            Close
-          </button>
-        </div>
-
-        <div class="p-6">
-          <div class="grid gap-4 md:grid-cols-2">
-            <img id="projectModalImg1" class="w-full h-[260px] object-cover rounded-xl border border-white/10" alt="" />
-            <img id="projectModalImg2" class="w-full h-[260px] object-cover rounded-xl border border-white/10" alt="" />
-          </div>
-          <p id="projectModalDesc" class="mt-5 text-sm leading-relaxed text-white/70"></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    const projectModal = document.getElementById("projectModal");
-    const projectModalTitle = document.getElementById("projectModalTitle");
-    const projectModalImg1 = document.getElementById("projectModalImg1");
-    const projectModalImg2 = document.getElementById("projectModalImg2");
-    const projectModalDesc = document.getElementById("projectModalDesc");
-
-    const projectData = {
-      library: {
-        title: "Library System Management — Screenshots",
-        img1: "LBMS-Logo.png",
-        img2: "LBMS-Logo.png",
-        desc:
-          "Highlights: admin dashboard overview for users, books, loans, and fines. Designed for quick monitoring and cleaner record tracking."
-      },
-      resort: {
-        title: "Resort Management System — Screenshots",
-        img1: "RMS-Logo.png",
-        img2: "RMS-Logo.png",
-        desc:
-          "Highlights: daily activity tracking (arrivals/check-in/out/in-house), date navigation, and occupancy overview for operations."
-      }
-    };
-
-    function getScrollbarWidth() {
-      return window.innerWidth - document.documentElement.clientWidth;
-    }
-
-    // ✅ Expose to global scope so onclick="" can call it
-    window.openProjectModal = function (key) {
-      const p = projectData[key];
-      if (!p) return;
-
-      projectModalTitle.textContent = p.title;
-      projectModalImg1.src = p.img1;
-      projectModalImg2.src = p.img2;
-      projectModalImg1.alt = p.title + " (1)";
-      projectModalImg2.alt = p.title + " (2)";
-      projectModalDesc.textContent = p.desc;
-
-      const sw = getScrollbarWidth();
-      document.body.style.paddingRight = sw ? sw + "px" : "0px";
-      document.body.style.overflow = "hidden";
-
-      projectModal.classList.remove("hidden");
-    };
-
-    // ✅ Expose to global scope so onclick="" can call it
-    window.closeProjectModal = function () {
-      projectModal.classList.add("hidden");
-      document.body.style.overflow = "";
-      document.body.style.paddingRight = "";
-    };
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && !projectModal.classList.contains("hidden")) window.closeProjectModal();
-    });
-  </script>
 </section>
+
 
 
     <section id="contact" class="mx-auto max-w-6xl px-6 py-20">
