@@ -471,8 +471,10 @@
       return window.innerWidth - document.documentElement.clientWidth;
     }
 
-    function openProjectModal(key) {
+    // ✅ Expose to global scope so onclick="" can call it
+    window.openProjectModal = function (key) {
       const p = projectData[key];
+      if (!p) return;
 
       projectModalTitle.textContent = p.title;
       projectModalImg1.src = p.img1;
@@ -486,19 +488,21 @@
       document.body.style.overflow = "hidden";
 
       projectModal.classList.remove("hidden");
-    }
+    };
 
-    function closeProjectModal() {
+    // ✅ Expose to global scope so onclick="" can call it
+    window.closeProjectModal = function () {
       projectModal.classList.add("hidden");
       document.body.style.overflow = "";
       document.body.style.paddingRight = "";
-    }
+    };
 
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && !projectModal.classList.contains("hidden")) closeProjectModal();
+      if (e.key === "Escape" && !projectModal.classList.contains("hidden")) window.closeProjectModal();
     });
   </script>
 </section>
+
 
     <section id="contact" class="mx-auto max-w-6xl px-6 py-20">
       <div class="text-center mb-12">
