@@ -98,16 +98,16 @@
     </div>
 
     <header class="sticky top-0 z-50 border-b border-white/5 bg-[#0b0f1a]/70 backdrop-blur-md">
-  <div class="mx-auto max-w-6xl px-6 py-4 grid grid-cols-3 items-center">
-    
-    <!-- LEFT: logo/name -->
+  <div class="mx-auto max-w-6xl px-6 py-4 grid grid-cols-[220px_auto_220px] items-center">
+
+    <!-- LEFT (fixed width) -->
     <a href="#home" class="group flex items-center gap-2 justify-self-start">
       <span class="text-lg font-semibold tracking-wide">Nicole</span>
       <span class="h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_18px_rgba(34,211,238,0.9)]
                    transition-transform duration-300 group-hover:scale-125"></span>
     </a>
 
-    <!-- CENTER: nav -->
+    <!-- CENTER (true + balanced center) -->
     <nav class="justify-self-center flex items-center gap-6 text-sm font-medium">
       <a href="#home" class="navlink relative text-white/90 hover:text-white transition">
         Home
@@ -119,10 +119,13 @@
       <a href="#contact" class="navlink text-white/70 hover:text-white transition">Contact</a>
     </nav>
 
-    <!-- RIGHT: spacer (keeps center true center) -->
+    <!-- RIGHT (fixed width, empty = equal counterweight) -->
     <div class="justify-self-end"></div>
+
   </div>
 </header>
+
+
 
 
     <!-- ✅ HOME (FIXED CENTER) -->
